@@ -16,13 +16,13 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 text-balance">WGN Home</h1>
+        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 text-balance">WGNHOME</h1>
         <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto text-pretty">
-          Layanan Online Internet Access
+          Fast & Stable Internet for Home and Business
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white">
-            Get Started
+            Check Availability
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
           <Button
@@ -30,7 +30,7 @@ export function HeroSection() {
             variant="outline"
             className="border-white text-white hover:bg-white hover:text-primary bg-transparent"
           >
-            REGISTER NOW
+            Sign Up Now
           </Button>
         </div>
       </div>

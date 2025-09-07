@@ -7,45 +7,48 @@ const plans = [
   {
     name: "Basic",
     speed: "100 Mbps",
-    price: "$39.99",
-    devices: "Up to 5 devices",
+    price: "Rp 166.500",
+    devices: "1-3 devices",
     features: [
       "100 Mbps download speed",
-      "10 Mbps upload speed",
+      "Stable connection",
       "No data caps",
       "Free modem rental",
-      "Basic email support",
+      "Email support",
+      "Coverage in Karawang",
     ],
     popular: false,
   },
   {
-    name: "Pro",
-    speed: "500 Mbps",
-    price: "$59.99",
-    devices: "Up to 15 devices",
+    name: "Standard",
+    speed: "150 Mbps",
+    price: "Rp 199.800",
+    devices: "1-5 devices",
     features: [
-      "500 Mbps download speed",
-      "50 Mbps upload speed",
+      "150 Mbps download speed",
+      "Enhanced stability",
       "No data caps",
       "Free modem & router",
       "Priority customer support",
       "Free installation",
+      "Coverage in Karawang",
     ],
     popular: true,
   },
   {
-    name: "Ultra",
-    speed: "1 Gig",
-    price: "$79.99",
-    devices: "Unlimited devices",
+    name: "Premium",
+    speed: "200 Mbps",
+    price: "Rp 255.300",
+    devices: "1-10 devices",
     features: [
-      "1 Gig download speed",
-      "100 Mbps upload speed",
+      "200 Mbps download speed",
+      "Ultra-stable connection",
       "No data caps",
       "Premium equipment included",
       "24/7 priority support",
       "Free installation & setup",
       "Advanced security features",
+      "Coverage in Karawang",
     ],
     popular: false,
   },
@@ -56,9 +59,9 @@ export function PricingSection() {
     <section id="pricing" className="py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Choose Your Plan</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Paket Internet WGNHOME</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Select the perfect internet plan for your needs with transparent pricing and no hidden fees
+            Pilih paket internet yang sesuai dengan kebutuhan Anda di Karawang dengan harga transparan
           </p>
         </div>
 
@@ -66,13 +69,13 @@ export function PricingSection() {
           {plans.map((plan, index) => (
             <Card key={index} className={`relative ${plan.popular ? "border-primary shadow-lg scale-105" : ""}`}>
               {plan.popular && (
-                <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary">Most Popular</Badge>
+                <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary">Paling Populer</Badge>
               )}
               <CardHeader className="text-center pb-8">
                 <CardTitle className="text-2xl mb-2">{plan.name}</CardTitle>
                 <div className="mb-4">
                   <span className="text-4xl font-bold text-primary">{plan.price}</span>
-                  <span className="text-muted-foreground">/month</span>
+                  <span className="text-muted-foreground">/bulan</span>
                 </div>
                 <CardDescription className="text-lg font-semibold text-foreground">{plan.speed}</CardDescription>
                 <p className="text-sm text-muted-foreground">{plan.devices}</p>
@@ -90,7 +93,7 @@ export function PricingSection() {
                   className={`w-full ${plan.popular ? "bg-primary hover:bg-primary/90" : ""}`}
                   variant={plan.popular ? "default" : "outline"}
                 >
-                  Select Plan
+                  Pilih Paket
                 </Button>
               </CardContent>
             </Card>
