@@ -6,23 +6,21 @@ import { useState, useEffect } from "react"
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    location: "Downtown",
+    name: "Rosmayanti Diah",
     rating: 5,
-    text: "WifiPro has been incredible! The installation was quick and the speeds are exactly as promised. Perfect for my home office setup.",
+    text: "Respon cepat, jarang gangguan, masalah cepat teratasi. Pelayanan sangat memuaskan!",
   },
   {
-    name: "Mike Chen",
-    location: "Business District",
+    name: "Ryzal HR",
     rating: 5,
-    text: "Our business relies on fast internet and WifiPro delivers. The customer support is outstanding and we've had zero downtime.",
+    text: "bagus sih penanganan nya cepat klo lg kendala. Sejauh ini ok bgt wgn.",
   },
   {
-    name: "Emily Rodriguez",
-    location: "Suburbs",
+    name: "Opik Maulana",
     rating: 5,
-    text: "Finally found an ISP that doesn't throttle speeds. Streaming 4K content is seamless and gaming has never been better!",
+    text: "Cepat tanggap dan responsif. Semoga ke depannya tambah lancar segala nya.",
   },
+
 ]
 
 export function TestimonialsSection() {
@@ -35,45 +33,86 @@ export function TestimonialsSection() {
     return () => clearInterval(timer)
   }, [])
 
+  const goToPrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length)
+  }
+
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length)
+  }
+
   return (
-    <section id="testimonials" className="py-20 bg-muted/30">
+    <section id="testimonials" className="py-24 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-slate-900 dark:to-slate-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">What Our Customers Say</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Don't just take our word for it - hear from satisfied customers across the city
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-emerald-100 to-emerald-200 dark:from-emerald-900/40 dark:to-emerald-800/40 mb-8 mx-auto shadow-lg">
+            <img 
+              src="https://wifianglobal.com/img/bg-img/welcome-img.png" 
+              alt="WGN Logo" 
+              className="h-12 w-12"
+            />
+          </div>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-6">Apa Kata Pelanggan Kami</h2>
+          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
+            Jangan hanya percaya kata kami - dengar langsung dari pelanggan yang puas di Karawang dan sekitarnya
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <Card className="border-none shadow-lg">
-            <CardContent className="p-8 text-center">
-              <div className="flex justify-center mb-4">
-                {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+        <div className="max-w-5xl mx-auto">
+          <Card className="border-slate-200/50 dark:border-slate-700/50 shadow-2xl transition-all duration-500 hover:shadow-2xl bg-white/90 dark:bg-slate-800/90 backdrop-blur-lg rounded-3xl border-2 overflow-hidden">
+            <CardContent className="p-8 md:p-14">
+              <div className="flex justify-center mb-8">
+                {[...Array(5)].map((_, i) => (
+                  <Star 
+                    key={i} 
+                    className={`h-8 w-8 ${i < testimonials[currentIndex].rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300 dark:text-gray-600'}`} 
+                  />
                 ))}
               </div>
-              <blockquote className="text-lg md:text-xl text-foreground mb-6 italic">
+              <blockquote className="text-xl md:text-2xl text-slate-800 dark:text-slate-200 mb-10 italic leading-relaxed text-center font-light">
                 "{testimonials[currentIndex].text}"
               </blockquote>
-              <div>
-                <p className="font-semibold text-foreground">{testimonials[currentIndex].name}</p>
-                <p className="text-muted-foreground">{testimonials[currentIndex].location}</p>
+              <div className="text-center">
+                <p className="font-bold text-slate-900 dark:text-white text-xl">{testimonials[currentIndex].name}</p>
               </div>
             </CardContent>
           </Card>
 
-          {/* Dots indicator */}
-          <div className="flex justify-center mt-8 space-x-2">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                className={`w-3 h-3 rounded-full transition-colors ${
-                  index === currentIndex ? "bg-primary" : "bg-muted-foreground/30"
-                }`}
-                onClick={() => setCurrentIndex(index)}
-              />
-            ))}
+          {/* Enhanced navigation */}
+          <div className="flex justify-between items-center mt-12">
+            <button 
+              onClick={goToPrev}
+              className="p-4 rounded-full bg-white dark:bg-slate-800 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-emerald-500 group"
+              aria-label="Previous testimonial"
+              type="button"
+            >
+              <svg className="w-7 h-7 text-slate-700 dark:text-slate-300 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            
+            <div className="flex space-x-3">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`w-4 h-4 rounded-full transition-all duration-500 ${index === currentIndex ? "bg-emerald-500 w-8" : "bg-slate-300 dark:bg-slate-600 hover:bg-slate-400 dark:hover:bg-slate-500"}`}
+                  aria-label={`View testimonial ${index + 1}`}
+                  type="button"
+                />
+              ))}
+            </div>
+            
+            <button 
+              onClick={goToNext}
+              className="p-4 rounded-full bg-white dark:bg-slate-800 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-emerald-500 group"
+              aria-label="Next testimonial"
+              type="button"
+            >
+              <svg className="w-7 h-7 text-slate-700 dark:text-slate-300 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>

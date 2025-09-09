@@ -1,103 +1,68 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Check } from "lucide-react"
+"use client";
 
-const plans = [
-  {
-    name: "Basic",
-    speed: "100 Mbps",
-    price: "Rp 166.500",
-    devices: "1-3 devices",
-    features: [
-      "100 Mbps download speed",
-      "Stable connection",
-      "No data caps",
-      "Free modem rental",
-      "Email support",
-      "Coverage in Karawang",
-    ],
-    popular: false,
-  },
-  {
-    name: "Standard",
-    speed: "150 Mbps",
-    price: "Rp 199.800",
-    devices: "1-5 devices",
-    features: [
-      "150 Mbps download speed",
-      "Enhanced stability",
-      "No data caps",
-      "Free modem & router",
-      "Priority customer support",
-      "Free installation",
-      "Coverage in Karawang",
-    ],
-    popular: true,
-  },
-  {
-    name: "Premium",
-    speed: "200 Mbps",
-    price: "Rp 255.300",
-    devices: "1-10 devices",
-    features: [
-      "200 Mbps download speed",
-      "Ultra-stable connection",
-      "No data caps",
-      "Premium equipment included",
-      "24/7 priority support",
-      "Free installation & setup",
-      "Advanced security features",
-      "Coverage in Karawang",
-    ],
-    popular: false,
-  },
-]
+import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Phone } from "lucide-react"
+import { PricingCards } from "@/components/pricing-cards"
 
 export function PricingSection() {
+  const handleWhatsAppClick = () => {
+    const phoneNumber = "+6289666666445"
+    const message = "Halo WGNHOME, saya ingin bertanya tentang layanan internet Anda."
+    const encodedMessage = encodeURIComponent(message)
+    const whatsappUrl = `https://wa.me/${phoneNumber.replace(/[^0-9]/g, "")}?text=${encodedMessage}`
+    window.open(whatsappUrl, "_blank")
+  }
+
   return (
-    <section id="pricing" className="py-20">
+    <section id="pricing" className="py-24 bg-gradient-to-br from-slate-50 to-emerald-50 dark:from-slate-900 dark:to-slate-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Paket Internet WGNHOME</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-emerald-100 to-emerald-200 dark:from-emerald-900/40 dark:to-emerald-800/40 mb-8 mx-auto shadow-lg">
+            <img 
+              src="https://wifianglobal.com/img/bg-img/welcome-img.png" 
+              alt="WGN Logo" 
+              className="h-12 w-12"
+            />
+          </div>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-6">Paket Internet WGNHOME</h2>
+          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
             Pilih paket internet yang sesuai dengan kebutuhan Anda di Karawang dengan harga transparan
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {plans.map((plan, index) => (
-            <Card key={index} className={`relative ${plan.popular ? "border-primary shadow-lg scale-105" : ""}`}>
-              {plan.popular && (
-                <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary">Paling Populer</Badge>
-              )}
-              <CardHeader className="text-center pb-8">
-                <CardTitle className="text-2xl mb-2">{plan.name}</CardTitle>
-                <div className="mb-4">
-                  <span className="text-4xl font-bold text-primary">{plan.price}</span>
-                  <span className="text-muted-foreground">/bulan</span>
+        <PricingCards />
+        
+        <div className="mt-20">
+          <Card className="max-w-5xl mx-auto bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-3xl border-2 shadow-2xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1">
+            <CardContent className="p-8 md:p-10">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+                <div className="flex items-center">
+                  <div className="mr-6 p-4 bg-gradient-to-br from-emerald-500/20 to-emerald-500/10 dark:from-emerald-500/30 dark:to-emerald-500/15 rounded-2xl shadow-lg border border-emerald-500/20 transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <img 
+                      src="https://wifianglobal.com/img/bg-img/welcome-img.png" 
+                      alt="WGN Logo" 
+                      className="h-12 w-12 object-contain filter drop-shadow-sm"
+                    />
+                  </div>
+                  <div className="text-left">
+                    <h3 className="font-extrabold text-slate-900 dark:text-white text-xl md:text-2xl">Keunggulan WGNHOME</h3>
+                    <p className="text-base md:text-lg text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+                      Semua paket WGNHOME dilengkapi dengan unlimited bandwidth tanpa batas kecepatan, 
+                      rasio upload:download 1:1, dan dukungan teknis 24/7.
+                    </p>
+                  </div>
                 </div>
-                <CardDescription className="text-lg font-semibold text-foreground">{plan.speed}</CardDescription>
-                <p className="text-sm text-muted-foreground">{plan.devices}</p>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <Check className="h-5 w-5 text-primary mr-3 flex-shrink-0" />
-                      <span className="text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Button
-                  className={`w-full ${plan.popular ? "bg-primary hover:bg-primary/90" : ""}`}
-                  variant={plan.popular ? "default" : "outline"}
+                <Button 
+                  className="rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 shadow-xl hover:shadow-2xl px-8 py-6 text-xl font-extrabold transform hover:-translate-y-1 transition-all duration-300 flex items-center group whitespace-nowrap"
+                  onClick={handleWhatsAppClick}
                 >
-                  Pilih Paket
+                  <Phone className="mr-3 h-6 w-6 transition-transform duration-300 group-hover:rotate-12" />
+                  Hubungi Kami
                 </Button>
-              </CardContent>
-            </Card>
-          ))}
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>

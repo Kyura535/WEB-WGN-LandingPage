@@ -4,7 +4,9 @@ import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
-import "./globals.css"
+import "./globals.css";
+import { WhatsAppButton } from "@/components/whatsapp-button";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: "PT Wifian Global Nusantara - WGN Home Internet",
@@ -18,10 +20,18 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
-        <Suspense fallback={null}>{children}</Suspense>
-        <Analytics />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Suspense fallback={null}>{children}</Suspense>
+          <Analytics />
+          <WhatsAppButton />
+        </ThemeProvider>
       </body>
     </html>
   )
