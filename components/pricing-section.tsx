@@ -37,21 +37,12 @@ export function PricingSection() {
           <Card className="max-w-5xl mx-auto bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-3xl border-2 shadow-2xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1">
             <CardContent className="p-8 md:p-10">
               <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-                <div className="flex items-center">
-                  <div className="mr-6 p-4 bg-gradient-to-br from-emerald-500/20 to-emerald-500/10 dark:from-emerald-500/30 dark:to-emerald-500/15 rounded-2xl shadow-lg border border-emerald-500/20 transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <img 
-                      src="https://wifianglobal.com/img/bg-img/welcome-img.png" 
-                      alt="WGN Logo" 
-                      className="h-12 w-12 object-contain filter drop-shadow-sm"
-                    />
-                  </div>
-                  <div className="text-left">
-                    <h3 className="font-extrabold text-slate-900 dark:text-white text-xl md:text-2xl">Keunggulan WGNHOME</h3>
-                    <p className="text-base md:text-lg text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
-                      Semua paket WGNHOME dilengkapi dengan unlimited bandwidth tanpa batas kecepatan, 
-                      rasio upload:download 1:1, dan dukungan teknis 24/7.
-                    </p>
-                  </div>
+                <div className="text-center md:text-left">
+                  <h3 className="font-extrabold text-slate-900 dark:text-white text-xl md:text-2xl mb-3">Keunggulan WGNHOME</h3>
+                  <p className="text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl">
+                    Semua paket WGNHOME dilengkapi dengan unlimited bandwidth tanpa batas kecepatan, 
+                    rasio upload:download 1:1, dan dukungan teknis 24/7.
+                  </p>
                 </div>
                 <Button 
                   className="rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 shadow-xl hover:shadow-2xl px-8 py-6 text-xl font-extrabold transform hover:-translate-y-1 transition-all duration-300 flex items-center group whitespace-nowrap"
