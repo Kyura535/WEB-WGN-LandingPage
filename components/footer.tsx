@@ -103,7 +103,7 @@ export function Footer() {
               </li>
               <li className="flex items-start">
                 <Mail className="h-5 w-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-slate-300">info@wifianglobal.com</span>
+                <span className="text-slate-300">wgn.operasional@gmail.com</span>
               </li>
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />
