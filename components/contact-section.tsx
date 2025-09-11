@@ -52,7 +52,7 @@ export function ContactSection() {
                     <Mail className="h-6 w-6" />
                   </div>
                   <h3 className="font-semibold mb-2 text-white">Email Kami</h3>
-                  <p className="text-slate-300">info@wifianglobal.com</p>
+                  <p className="text-slate-300">marketing.wifianglobalnusantara@gmail.com</p>
                   <p className="text-sm text-slate-400">Balas dalam 24 jam</p>
                 </CardContent>
               </Card>
