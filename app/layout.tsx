@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   title: "PT Wifian Global Nusantara - WGN Home Internet",
   description: "Layanan Online Internet Access terpercaya dengan paket unlimited dan support 24/7",
   generator: "v0.app",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon/apple-touch-icon.png",
+  },
 }
 
 export default function RootLayout({
@@ -22,6 +27,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
+        <meta name="theme-color" content="#000000" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-RP3QNPJ4C6"></script>
         <script dangerouslySetInnerHTML={{
           __html: `
