@@ -77,7 +77,7 @@ export function ContactSection() {
                     <Zap className="h-6 w-6" />
                   </div>
                   <h3 className="font-semibold mb-2 text-white">Chat via WhatsApp</h3>
-                  <p className="text-slate-300">+62 896 6666 6445</p>
+                  <p className="text-slate-300">+62 896 6666 6358</p>
                   <Button 
                     onClick={handleWhatsAppClick}
                     className="mt-3 rounded-full px-4 py-2 text-sm bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600"
