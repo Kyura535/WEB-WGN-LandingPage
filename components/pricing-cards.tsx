@@ -58,7 +58,7 @@ const plans = [
 
 export function PricingCards() {
   const handleWhatsAppClick = (planName: string) => {
-    const phoneNumber = "+6289666666445";
+    const phoneNumber = "+6289666666358";
     const message = `Halo WGNHOME, saya tertarik dengan paket ${planName} (${plans.find(p => p.name === planName)?.speed}) seharga ${plans.find(p => p.name === planName)?.price}/bulan. Mohon informasi lebih lanjut.`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber.replace(/[^0-9]/g, "")}?text=${encodedMessage}`;

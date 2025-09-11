@@ -4,7 +4,7 @@ import { Facebook, Twitter, Instagram, Linkedin, Phone, Mail, MapPin } from "luc
 
 export function Footer() {
   const handleWhatsAppClick = () => {
-    const phoneNumber = "+6289666666445"
+    const phoneNumber = "+6289666666358"
     const message = "Halo WGNHOME, saya ingin bertanya tentang layanan internet Anda."
     const encodedMessage = encodeURIComponent(message)
     const whatsappUrl = `https://wa.me/${phoneNumber.replace(/[^0-9]/g, "")}?text=${encodedMessage}`

@@ -8,7 +8,7 @@ import { Phone, MapPin, Mail, Zap } from "lucide-react"
 
 export function ContactSection() {
   const handleWhatsAppClick = () => {
-    const phoneNumber = "+6289666666445"
+    const phoneNumber = "+6289666666358"
     const message = "Halo WGNHOME, saya tertarik dengan layanan internet Anda. Mohon informasi lebih lanjut."
     const encodedMessage = encodeURIComponent(message)
     const whatsappUrl = `https://wa.me/${phoneNumber.replace(/[^0-9]/g, "")}?text=${encodedMessage}`

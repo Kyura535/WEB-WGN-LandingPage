@@ -38,7 +38,7 @@ const packages = [
 export function PromoSection() {
   // Handle package selection and redirect to WhatsApp
   const handlePackageSelect = (packageName: string, packageSpeed: string, packagePrice: string) => {
-    const phoneNumber = "+6289666666445";
+    const phoneNumber = "+6289666666358";
     const message = `Halo WGNHOME, saya tertarik dengan paket ${packageName} (${packageSpeed}) seharga ${packagePrice}/bulan. Mohon informasi lebih lanjut.`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber.replace(/[^0-9]/g, "")}?text=${encodedMessage}`;
@@ -50,7 +50,8 @@ export function PromoSection() {
       id="promo" 
       className="py-24 bg-gradient-to-br from-emerald-50 to-teal-100 dark:from-slate-900 dark:to-slate-800 relative overflow-hidden"
     >
-      {/* Background pattern */}
+      {/* Background pattern */
+}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0ibGltZSIgZmlsbC1vcGFjaXR5PSIwLjA1Ii8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm4pIi8+PC9zdmc+')] opacity-5"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

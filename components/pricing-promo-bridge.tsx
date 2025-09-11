@@ -5,7 +5,7 @@ import { Phone } from "lucide-react";
 
 export function PricingPromoBridge() {
   const handleWhatsAppClick = () => {
-    const phoneNumber = "+6289666666445";
+    const phoneNumber = "+6289666666358";
     const message = "Halo WGNHOME, saya ingin bertanya tentang penawaran paket internet.";
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber.replace(/[^0-9]/g, "")}?text=${encodedMessage}`;
