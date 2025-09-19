@@ -17,6 +17,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // Menonaktifkan output standalone karena masalah kompatibilitas Windows
+  // output: 'standalone',
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,

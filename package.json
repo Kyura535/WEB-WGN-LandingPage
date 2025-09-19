@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "build": "next build",
+    "build:standalone": "next build && node scripts/build-standalone.js",
     "dev": "next dev",
+    "dev:custom": "node index.js",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "start:standalone": "node server.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

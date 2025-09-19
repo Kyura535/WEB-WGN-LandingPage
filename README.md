@@ -28,3 +28,12 @@ Continue building your app on:
 2. Deploy your chats from the v0 interface
 3. Changes are automatically pushed to this repository
 4. Vercel deploys the latest version from this repository
+
+## Custom Build and Deployment Options
+
+This project now supports multiple entry points and build options. See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed information about:
+
+- Custom entry points (`index.js`)
+- Standalone builds
+- Additional build scripts
+- Deployment strategies
