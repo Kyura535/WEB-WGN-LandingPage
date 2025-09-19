@@ -52,14 +52,18 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="WGN Home" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-RP3QNPJ4C6"></script>
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-RP3QNPJ4C6');
-          `
-        }} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-RP3QNPJ4C6', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
       </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         <ThemeProvider
