@@ -5,9 +5,11 @@
   "scripts": {
     "build": "next build",
     "build:standalone": "next build && node scripts/build-standalone.js",
+    "build:static": "next build",
     "dev": "next dev",
     "dev:custom": "node index.js",
     "lint": "next lint",
+    "serve:static": "npx serve out",
     "start": "next start",
     "start:standalone": "node server.js"
   },

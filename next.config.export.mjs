@@ -19,6 +19,9 @@ const nextConfig = {
   },
   // Konfigurasi untuk static export
   output: 'export',
+  // Menonaktifkan fitur yang tidak kompatibel dengan static export
+  // Menonaktifkan output standalone karena masalah kompatibilitas Windows
+  // output: 'standalone',
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,

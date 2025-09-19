@@ -37,3 +37,12 @@ This project now supports multiple entry points and build options. See [DEPLOYME
 - Standalone builds
 - Additional build scripts
 - Deployment strategies
+
+### Deployment to cPanel
+
+This project can also be deployed to cPanel hosting using static export. See [DEPLOYMENT-CPANEL.md](DEPLOYMENT-CPANEL.md) for detailed instructions on:
+
+- Building the project for static deployment
+- Configuring .htaccess for client-side routing
+- Uploading files to cPanel
+- Handling limitations of static export
