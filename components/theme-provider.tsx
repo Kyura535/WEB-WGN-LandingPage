@@ -7,5 +7,5 @@ import {
 } from 'next-themes'
 
 export function ThemeProvider({ children, ...props }: Omit<ThemeProviderProps, 'children'> & { children: React.ReactNode }) {
-  return <NextThemesProvider {...props}>{children}</NextThemesProvider>
+  return <NextThemesProvider defaultTheme="dark" {...props}>{children}</NextThemesProvider>
 }

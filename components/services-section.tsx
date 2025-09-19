@@ -32,18 +32,18 @@ export function ServicesSection() {
   };
 
   return (
-    <section id="services" className="py-24 bg-gradient-to-br from-slate-50 to-emerald-50 dark:from-slate-900 dark:to-slate-800">
+    <section id="services" className="py-24 bg-gradient-to-br from-slate-900 to-slate-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-emerald-100 to-emerald-200 dark:from-emerald-900/40 dark:to-emerald-800/40 mb-8 mx-auto shadow-lg">
+          <div className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 mb-8 mx-auto shadow-lg border border-emerald-500/30">
             <img 
               src="https://wifianglobal.com/img/bg-img/welcome-img.png" 
               alt="WGN Logo" 
-              className="h-12 w-12"
+              className="h-14 w-14"
             />
           </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-6">Product WGN</h2>
-          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">Product WGN</h2>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
             Innovative internet solutions designed to meet all your connectivity needs
           </p>
         </div>
@@ -52,33 +52,33 @@ export function ServicesSection() {
           {products.map((product, index) => (
             <Card 
               key={index} 
-              className="text-center hover:shadow-2xl transition-all duration-500 border-slate-200 dark:border-slate-700 hover:border-emerald-400 dark:hover:border-emerald-500 group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border-2"
+              className="text-center hover:shadow-2xl transition-all duration-500 border-slate-700 bg-slate-800/50 hover:border-emerald-500 group rounded-2xl overflow-hidden border-2 backdrop-blur-sm"
             >
               <CardHeader className="pb-6">
-                <div className="mx-auto mb-6 p-4 bg-gradient-to-br from-emerald-500/15 to-emerald-500/5 dark:from-emerald-500/25 dark:to-emerald-500/10 rounded-2xl w-fit group-hover:from-emerald-500/25 group-hover:to-emerald-500/15 dark:group-hover:from-emerald-500/35 dark:group-hover:to-emerald-500/20 transition-all duration-500 shadow-md">
-                  <product.icon className="h-10 w-10 text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform duration-300" />
+                <div className="mx-auto mb-6 p-4 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-2xl w-fit group-hover:from-emerald-500/30 group-hover:to-teal-500/30 transition-all duration-500 shadow-md border border-emerald-500/30">
+                  <product.icon className="h-10 w-10 text-emerald-400 group-hover:scale-110 transition-transform duration-300" />
                 </div>
-                <CardTitle className="text-2xl mb-3 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors text-slate-900 dark:text-white font-bold">{product.title}</CardTitle>
-                <CardDescription className="text-slate-600 dark:text-slate-400 text-base leading-relaxed">{product.description}</CardDescription>
+                <CardTitle className="text-2xl mb-3 group-hover:text-emerald-400 transition-colors text-white font-bold">{product.title}</CardTitle>
+                <CardDescription className="text-slate-300 text-base leading-relaxed">{product.description}</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-4 mb-8">
                   {product.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
-                      <div className="mr-4 mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500/15 dark:bg-emerald-500/25 flex-shrink-0">
-                        <Check className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
+                      <div className="mr-4 mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500/20 flex-shrink-0 border border-emerald-500/30">
+                        <Check className="h-4 w-4 text-emerald-400" />
                       </div>
-                      <span className="text-base text-slate-700 dark:text-slate-300">{feature}</span>
+                      <span className="text-base text-slate-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
                 <Button 
                   variant="outline" 
-                  className="w-full rounded-full border-2 border-slate-300 dark:border-slate-600 hover:border-emerald-500 hover:bg-gradient-to-r from-emerald-500/10 to-emerald-500/5 dark:hover:from-emerald-500/20 dark:hover:to-emerald-500/10 transition-all duration-300 text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-semibold py-4 text-base shadow-md hover:shadow-lg transform hover:-translate-y-1 flex items-center justify-center"
+                  className="w-full rounded-full border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-400 hover:text-emerald-300 font-semibold py-4 text-base shadow-md hover:shadow-lg transform hover:-translate-y-1 flex items-center justify-center transition-all duration-300 group"
                   onClick={() => handleLearnMoreClick(product.title)}
                 >
-                  <ArrowRight className="ml-2 h-4 w-4" />
                   Learn More
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </Button>
               </CardContent>
             </Card>

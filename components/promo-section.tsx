@@ -48,7 +48,7 @@ export function PromoSection() {
   return (
     <section 
       id="promo" 
-      className="py-24 bg-gradient-to-br from-emerald-50 to-teal-100 dark:from-slate-900 dark:to-slate-800 relative overflow-hidden"
+      className="py-24 bg-gradient-to-br from-slate-900 to-slate-800 relative overflow-hidden"
     >
       {/* Background pattern */
 }
@@ -61,10 +61,10 @@ export function PromoSection() {
             <Gift className="w-5 h-5 mr-2" />
             Penawaran Spesial
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
             Paket Internet WGN Home
           </h2>
-          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
             Nikmati koneksi internet cepat dan stabil dengan paket yang sesuai kebutuhan Anda
           </p>
         </div>
@@ -72,14 +72,14 @@ export function PromoSection() {
         {/* Main content grid - Responsive for all devices */}
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 max-w-7xl mx-auto">
           {/* Promo Card - Left Column */}
-          <Card className="border-slate-200/50 dark:border-slate-700/50 shadow-2xl transition-all duration-500 hover:shadow-2xl bg-white/95 dark:bg-slate-800/95 backdrop-blur-xl rounded-3xl border-2 overflow-hidden transform hover:-translate-y-2 h-full flex flex-col">
+          <Card className="border-slate-700/50 shadow-2xl transition-all duration-500 hover:shadow-2xl bg-slate-800/50 backdrop-blur-xl rounded-3xl border-2 overflow-hidden transform hover:-translate-y-2 h-full flex flex-col">
             {/* Accent bar */}
             <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-emerald-500 to-teal-500"></div>
             
             <CardHeader className="text-center pb-8 pt-8">
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
                 {/* Logo container */}
-                <div className="w-20 h-20 text-emerald-500 bg-gradient-to-br from-emerald-500/15 to-teal-500/15 dark:from-emerald-500/20 dark:to-teal-500/20 rounded-2xl flex items-center justify-center shadow-lg border border-emerald-500/20">
+                <div className="w-20 h-20 text-emerald-400 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-2xl flex items-center justify-center shadow-lg border border-emerald-500/30">
                   <img 
                     src="https://wifianglobal.com/img/bg-img/welcome-img.png" 
                     alt="WGN Logo" 
@@ -93,13 +93,13 @@ export function PromoSection() {
                     <Gift className="w-5 h-5 mr-2" />
                     Hemat 20%
                   </Badge>
-                  <CardTitle className="text-3xl font-extrabold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent text-center sm:text-left">
+                  <CardTitle className="text-3xl font-extrabold text-white text-center sm:text-left">
                     Paket Hemat untuk Keluarga
                   </CardTitle>
                 </div>
               </div>
               
-              <CardDescription className="text-xl mt-3 text-slate-700 dark:text-slate-300">
+              <CardDescription className="text-xl mt-3 text-slate-300">
                 Dapatkan kecepatan tinggi dengan harga terjangkau
               </CardDescription>
             </CardHeader>
@@ -109,33 +109,33 @@ export function PromoSection() {
               <ul className="space-y-5 mb-8">
                 <li className="flex items-start">
                   <div className="w-4 h-4 bg-emerald-500 rounded-full mt-1.5 mr-4 flex-shrink-0 shadow-sm"></div>
-                  <span className="text-slate-700 dark:text-slate-300 text-lg leading-relaxed">
+                  <span className="text-slate-300 text-lg leading-relaxed">
                     Unlimited bandwidth tanpa batas kecepatan
                   </span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-4 h-4 bg-emerald-500 rounded-full mt-1.5 mr-4 flex-shrink-0 shadow-sm"></div>
-                  <span className="text-slate-700 dark:text-slate-300 text-lg leading-relaxed">
+                  <span className="text-slate-300 text-lg leading-relaxed">
                     Rasio upload:download 1:1
                   </span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-4 h-4 bg-emerald-500 rounded-full mt-1.5 mr-4 flex-shrink-0 shadow-sm"></div>
-                  <span className="text-slate-700 dark:text-slate-300 text-lg leading-relaxed">
+                  <span className="text-slate-300 text-lg leading-relaxed">
                     Gratis instalasi dan perangkat
                   </span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-4 h-4 bg-emerald-500 rounded-full mt-1.5 mr-4 flex-shrink-0 shadow-sm"></div>
-                  <span className="text-slate-700 dark:text-slate-300 text-lg leading-relaxed">
+                  <span className="text-slate-300 text-lg leading-relaxed">
                     Dukungan teknis 24/7
                   </span>
                 </li>
               </ul>
               
               {/* Terms and conditions */}
-              <div className="bg-emerald-500/10 dark:bg-emerald-500/20 rounded-2xl p-5 border border-emerald-500/20 mt-auto">
-                <p className="text-base text-emerald-700 dark:text-emerald-300 text-center font-medium">
+              <div className="bg-emerald-500/10 rounded-2xl p-5 border border-emerald-500/30 mt-auto">
+                <p className="text-base text-emerald-400 text-center font-medium">
                   *Syarat dan ketentuan berlaku. Harga sudah termasuk PPN.
                 </p>
               </div>
@@ -143,14 +143,14 @@ export function PromoSection() {
           </Card>
 
           {/* Package Selection - Right Column */}
-          <Card className="transition-all duration-500 hover:shadow-2xl border-slate-200/50 dark:border-slate-700/50 bg-white/95 dark:bg-slate-800/95 backdrop-blur-xl rounded-3xl border-2 overflow-hidden h-full flex flex-col">
+          <Card className="transition-all duration-500 hover:shadow-2xl border-slate-700/50 bg-slate-800/50 backdrop-blur-xl rounded-3xl border-2 overflow-hidden h-full flex flex-col">
             {/* Accent bar */}
             <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-emerald-500 to-teal-500"></div>
             
             <CardHeader className="pb-6 pt-8">
-              <CardTitle className="text-3xl flex items-center font-extrabold text-slate-900 dark:text-white">
+              <CardTitle className="text-3xl flex items-center font-extrabold text-white">
                 {/* Logo container */}
-                <div className="w-12 h-12 text-emerald-500 mr-4 bg-gradient-to-br from-emerald-500/15 to-teal-500/15 dark:from-emerald-500/20 dark:to-teal-500/20 rounded-2xl flex items-center justify-center shadow-md border border-emerald-500/20">
+                <div className="w-12 h-12 text-emerald-400 mr-4 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-2xl flex items-center justify-center shadow-md border border-emerald-500/30">
                   <img 
                     src="https://wifianglobal.com/img/bg-img/welcome-img.png" 
                     alt="WGN Logo" 
@@ -159,7 +159,7 @@ export function PromoSection() {
                 </div>
                 Pilih Paket Anda
               </CardTitle>
-              <CardDescription className="text-lg mt-2 text-slate-700 dark:text-slate-300">
+              <CardDescription className="text-lg mt-2 text-slate-300">
                 Pilih paket internet yang sesuai dengan kebutuhan Anda
               </CardDescription>
             </CardHeader>
@@ -172,8 +172,8 @@ export function PromoSection() {
                     key={index} 
                     className={`p-6 rounded-2xl border-2 transition-all duration-300 hover:shadow-xl cursor-pointer transform hover:-translate-y-1 flex flex-col ${
                       pkg.popular 
-                        ? "border-emerald-500 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 dark:from-emerald-900/30 dark:to-teal-900/30 shadow-lg" 
-                        : "border-slate-200 dark:border-slate-700 hover:border-emerald-400 hover:bg-emerald-500/5 dark:hover:bg-emerald-900/20"
+                        ? "border-emerald-500 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 shadow-lg" 
+                        : "border-slate-700 hover:border-emerald-500 hover:bg-emerald-500/5"
                     }`}
                     onClick={() => handlePackageSelect(pkg.name, pkg.speed, pkg.price)}
                   >
@@ -187,24 +187,24 @@ export function PromoSection() {
                     
                     {/* Package details */}
                     <div className="flex-grow">
-                      <h3 className="font-extrabold text-slate-900 dark:text-white text-xl mb-2">
+                      <h3 className="font-extrabold text-white text-xl mb-2">
                         {pkg.name}
                       </h3>
-                      <p className="text-base text-slate-600 dark:text-slate-400 mb-3">
+                      <p className="text-base text-slate-300 mb-3">
                         {pkg.speed}
                       </p>
                       <div className="mb-1 flex items-baseline flex-wrap">
-                        <span className="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400">
+                        <span className="text-2xl font-extrabold text-emerald-400">
                           {pkg.price}
                         </span>
-                        <span className="text-sm font-normal text-slate-600 dark:text-slate-400 ml-1">
+                        <span className="text-sm font-normal text-slate-400 ml-1">
                           /bulan
                         </span>
                       </div>
                     </div>
                     
                     {/* Devices info - always at bottom */}
-                    <p className="text-sm text-slate-600 dark:text-slate-400 mt-4 pt-3 border-t border-slate-200 dark:border-slate-700">
+                    <p className="text-sm text-slate-400 mt-4 pt-3 border-t border-slate-700">
                       {pkg.devices}
                     </p>
                   </div>
@@ -212,11 +212,11 @@ export function PromoSection() {
               </div>
               
               {/* WhatsApp CTA Section */}
-              <div className="mt-8 border-t border-slate-200 dark:border-slate-700 pt-8">
-                <h4 className="font-extrabold text-slate-900 dark:text-white text-2xl mb-6 text-center">
+              <div className="mt-8 border-t border-slate-700 pt-8">
+                <h4 className="font-extrabold text-white text-2xl mb-6 text-center">
                   Hubungi Kami via WhatsApp
                 </h4>
-                <p className="text-sm text-slate-600 dark:text-slate-400 text-center mt-4">
+                <p className="text-sm text-slate-400 text-center mt-4">
                   Klik pada paket di atas untuk langsung menghubungi kami via WhatsApp
                 </p>
               </div>

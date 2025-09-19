@@ -38,7 +38,7 @@ export function HeroSection() {
   };
 
   return (
-    <section id="home" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-emerald-900 to-emerald-800">
+    <section id="home" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Animated background elements */}
       <div className="absolute inset-0">
         {/* Grid pattern */}
@@ -123,7 +123,7 @@ export function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg" 
-                className="rounded-full px-6 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 font-bold py-4 text-base"
+                className="rounded-full px-6 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 font-bold py-4 text-base"
                 onClick={handleGetStartedClick}
               >
                 Get Started
@@ -132,7 +132,7 @@ export function HeroSection() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="rounded-full border-2 border-slate-600 text-white hover:bg-slate-800 hover:border-emerald-500 font-bold py-4 text-base"
+                className="rounded-full border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-400 font-bold py-4 text-base shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
                 onClick={handleViewPlansClick}
               >
                 View Plans

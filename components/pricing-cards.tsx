@@ -70,10 +70,10 @@ export function PricingCards() {
       {plans.map((plan, index) => (
         <Card 
           key={index} 
-          className={`relative overflow-hidden transition-all duration-500 hover:shadow-2xl border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 rounded-2xl border-2 transform hover:-translate-y-2 flex flex-col ${
+          className={`relative overflow-hidden transition-all duration-500 hover:shadow-2xl border-slate-700 bg-slate-800 rounded-2xl border-2 transform hover:-translate-y-2 flex flex-col ${
             plan.popular 
               ? "border-emerald-500 shadow-xl ring-2 ring-emerald-500/20" 
-              : "hover:border-emerald-400 dark:hover:border-emerald-500"
+              : "hover:border-emerald-400"
           }`}
         >
           {plan.popular && (
@@ -82,24 +82,24 @@ export function PricingCards() {
             </Badge>
           )}
           <CardHeader className="text-center pb-6 pt-8">
-            <CardTitle className="text-2xl mb-3 text-slate-900 dark:text-white font-bold">{plan.name}</CardTitle>
+            <CardTitle className="text-2xl mb-3 text-white font-bold">{plan.name}</CardTitle>
             <div className="mb-3 flex items-baseline justify-center flex-wrap">
-              <span className="text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">
+              <span className="text-3xl font-extrabold text-emerald-400">
                 {plan.price}
               </span>
-              <span className="text-slate-500 dark:text-slate-400 text-base ml-1">/bulan</span>
+              <span className="text-slate-400 text-base ml-1">/bulan</span>
             </div>
-            <CardDescription className="text-lg font-bold text-slate-900 dark:text-white">{plan.speed}</CardDescription>
-            <p className="text-base text-slate-600 dark:text-slate-400 mt-2">{plan.devices}</p>
+            <CardDescription className="text-lg font-bold text-white">{plan.speed}</CardDescription>
+            <p className="text-base text-slate-300 mt-2">{plan.devices}</p>
           </CardHeader>
           <CardContent className="flex flex-col flex-grow">
             <ul className="space-y-3 mb-6 flex-grow">
               {plan.features.map((feature, featureIndex) => (
                 <li key={featureIndex} className="flex items-start">
-                  <div className="mr-3 mt-1 flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500/15 dark:bg-emerald-500/25 flex-shrink-0">
-                    <Check className="h-3 w-3 text-emerald-600 dark:text-emerald-400" />
+                  <div className="mr-3 mt-1 flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500/25 flex-shrink-0">
+                    <Check className="h-3 w-3 text-emerald-400" />
                   </div>
-                  <span className="text-sm text-slate-700 dark:text-slate-300">{feature}</span>
+                  <span className="text-sm text-slate-300">{feature}</span>
                 </li>
               ))}
             </ul>
@@ -108,7 +108,7 @@ export function PricingCards() {
                 className={`w-full rounded-full transition-all duration-300 font-semibold py-3 text-base shadow-md hover:shadow-lg transform hover:-translate-y-1 ${
                   plan.popular 
                     ? "bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600" 
-                    : "border-2 border-slate-300 dark:border-slate-600 hover:border-emerald-500 hover:bg-emerald-500/10 dark:hover:bg-emerald-500/20 text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400"
+                    : "border-2 border-slate-600 hover:border-emerald-500 hover:bg-emerald-500/20 text-slate-300 hover:text-emerald-400"
                 }`}
                 variant={plan.popular ? "default" : "outline"}
                 onClick={() => handleWhatsAppClick(plan.name)}

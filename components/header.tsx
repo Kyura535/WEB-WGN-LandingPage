@@ -46,8 +46,8 @@ export function Header() {
       className={cn(
         "sticky top-0 z-50 w-full transition-all duration-500",
         isScrolled 
-          ? "bg-white/10 dark:bg-black/10 backdrop-blur-xl border-b border-white/20 dark:border-white/10 shadow-lg" 
-          : "bg-white/5 dark:bg-black/5 backdrop-blur-md"
+          ? "bg-slate-900/90 backdrop-blur-xl border-b border-slate-700 shadow-lg" 
+          : "bg-slate-900/80 backdrop-blur-md"
       )}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -98,7 +98,7 @@ export function Header() {
         {/* Mobile Navigation */}
         <div 
           className={`md:hidden transition-all duration-500 ease-in-out overflow-hidden rounded-b-2xl ${
-            isMenuOpen ? 'max-h-96 opacity-100 bg-white/10 dark:bg-black/10 backdrop-blur-xl mt-2' : 'max-h-0 opacity-0'
+            isMenuOpen ? 'max-h-96 opacity-100 bg-slate-900/90 backdrop-blur-xl mt-2' : 'max-h-0 opacity-0'
           }`}
         >
           <nav className="flex flex-col space-y-2 py-4 px-2">
