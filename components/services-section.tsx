@@ -73,8 +73,7 @@ export function ServicesSection() {
                   ))}
                 </ul>
                 <Button 
-                  variant="outline" 
-                  className="w-full rounded-full border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-400 hover:text-emerald-300 font-semibold py-4 text-base shadow-md hover:shadow-lg transform hover:-translate-y-1 flex items-center justify-center transition-all duration-300 group"
+                  className="w-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-bold py-4 text-base shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center transition-all duration-300 group"
                   onClick={() => handleLearnMoreClick(product.title)}
                 >
                   Learn More

@@ -131,8 +131,7 @@ export function HeroSection() {
               </Button>
               <Button 
                 size="lg" 
-                variant="outline" 
-                className="rounded-full border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-400 font-bold py-4 text-base shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+                className="rounded-full px-6 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 font-bold py-4 text-base text-white"
                 onClick={handleViewPlansClick}
               >
                 View Plans

@@ -76,6 +76,8 @@ export function AboutSection() {
           </div>
         </div>
 
+        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <Card className="transition-all duration-300 hover:shadow-xl border-slate-700 bg-slate-800/50 backdrop-blur-sm rounded-2xl overflow-hidden transform hover:-translate-y-1">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 to-teal-500"></div>
@@ -89,7 +91,7 @@ export function AboutSection() {
             </CardHeader>
             <CardContent>
               <p className="text-slate-300 leading-relaxed">
-                Layanan internet rumah dengan kecepatan mulai dari 10 Mbps hingga 50 Mbps. 
+                Layanan internet rumah dengan kecepatan mulai dari 100 Mbps hingga 1 Gbps. 
                 Semua paket dilengkapi dengan bandwidth unlimited tanpa batas kecepatan.
               </p>
             </CardContent>
@@ -130,6 +132,66 @@ export function AboutSection() {
               </p>
             </CardContent>
           </Card>
+        </div>
+
+        {/* Team Photo Section */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-extrabold text-white mb-6 text-center">Tim Kami</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="relative rounded-2xl overflow-hidden border-2 border-slate-700 shadow-xl aspect-video">
+              <img 
+                src="/img/wgn-team/1.png" 
+                alt="Tim WGN" 
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"></div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden border-2 border-slate-700 shadow-xl aspect-video">
+              <img 
+                src="/img/wgn-team/2.png" 
+                alt="Tim WGN" 
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"></div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden border-2 border-slate-700 shadow-xl aspect-video">
+              <img 
+                src="/img/wgn-team/3.png" 
+                alt="Tim WGN" 
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"></div>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+            <div className="relative rounded-2xl overflow-hidden border-2 border-slate-700 shadow-xl aspect-video">
+              <img 
+                src="/img/wgn-team/4.png" 
+                alt="Tim WGN" 
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"></div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden border-2 border-slate-700 shadow-xl aspect-video">
+              <img 
+                src="/img/wgn-team/foto tim wgn.png" 
+                alt="Tim WGN" 
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"></div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden border-2 border-slate-700 shadow-xl aspect-video">
+              <img 
+                src="/img/wgn-team/1.png" 
+                alt="Tim WGN" 
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"></div>
+            </div>
+          </div>
+          <p className="text-slate-300 text-center mt-6 max-w-3xl mx-auto">
+            Tim profesional kami berkomitmen untuk memberikan layanan terbaik dan solusi internet berkualitas tinggi untuk Anda.
+          </p>
         </div>
       </div>
     </section>
