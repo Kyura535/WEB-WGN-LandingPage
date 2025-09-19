@@ -31,7 +31,7 @@ export function AboutSection() {
               untuk mendukung aktivitas digital Anda sehari-hari.
             </p>
             <p className="text-slate-300 leading-relaxed">
-              Kami menawarkan berbagai paket internet rumah (WGN Home) dengan kecepatan mulai dari 10 Mbps hingga 50 Mbps, 
+              Kami menawarkan berbagai paket internet rumah (WGN Home) dengan kecepatan mulai dari 100 Mbps hingga 1 Gbps, 
               semua dengan bandwidth unlimited tanpa batas kecepatan. Selain itu, kami juga menyediakan program kemitraan 
               untuk pengembangan hotspot dan infrastruktur jaringan.
             </p>
