@@ -19,7 +19,15 @@ const nextConfig = {
   },
   // Konfigurasi untuk static export
   output: 'export',
-  webpack(config) {
+  webpack(config, { isServer }) {
+    // Fix for the webpack runtime issue
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+      }
+    }
+    
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
