@@ -81,7 +81,7 @@ export function PromoSection() {
                 {/* Logo container */}
                 <div className="w-20 h-20 text-emerald-400 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-2xl flex items-center justify-center shadow-lg border border-emerald-500/30">
                   <img 
-                    src="https://wifianglobal.com/img/bg-img/welcome-img.png" 
+                    src="/img/bg-img/welcome-img.png" 
                     alt="WGN Logo" 
                     className="h-12 w-12"
                   />
@@ -152,7 +152,7 @@ export function PromoSection() {
                 {/* Logo container */}
                 <div className="w-12 h-12 text-emerald-400 mr-4 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-2xl flex items-center justify-center shadow-md border border-emerald-500/30">
                   <img 
-                    src="https://wifianglobal.com/img/bg-img/welcome-img.png" 
+                    src="/img/bg-img/welcome-img.png" 
                     alt="WGN Logo" 
                     className="h-7 w-7"
                   />

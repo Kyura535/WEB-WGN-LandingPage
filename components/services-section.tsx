@@ -37,10 +37,10 @@ export function ServicesSection() {
         <div className="text-center mb-20">
           <div className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 mb-8 mx-auto shadow-lg border border-emerald-500/30">
             <img 
-              src="https://wifianglobal.com/img/bg-img/welcome-img.png" 
-              alt="WGN Logo" 
-              className="h-14 w-14"
-            />
+                src="/img/bg-img/welcome-img.png" 
+                alt="WGN Logo" 
+                className="h-14 w-14"
+              />
           </div>
           <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">Product WGN</h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">

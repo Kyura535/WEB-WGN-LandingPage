@@ -26,7 +26,7 @@ export function Footer() {
           <div className="col-span-1 lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
               <img
-                src="https://wifianglobal.com/img/bg-img/welcome-img.png"
+                src="/img/bg-img/welcome-img.png"
                 alt="WGN Logo"
                 className="h-12 w-auto"
               />

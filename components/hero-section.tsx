@@ -83,7 +83,7 @@ export function HeroSection() {
           <div className={`transform transition-all duration-1000 ${isMounted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
               <img 
-                src="https://wifianglobal.com/img/bg-img/welcome-img.png" 
+                src="/img/bg-img/welcome-img.png" 
                 alt="WGN Logo" 
                 className="h-5 w-5"
               />
@@ -158,7 +158,7 @@ export function HeroSection() {
                   </div>
                   <div className="bg-slate-700/50 rounded-lg p-4 text-center transition-all duration-300 hover:bg-slate-700/70">
                     <img 
-                      src="https://wifianglobal.com/img/bg-img/welcome-img.png" 
+                      src="/img/bg-img/welcome-img.png" 
                       alt="WGN Logo" 
                       className="h-8 w-8 mx-auto mb-2"
                     />

@@ -13,7 +13,7 @@ export function RegisterCTA() {
               className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm mb-6"
             >
               <img 
-                src="https://wifianglobal.com/img/bg-img/welcome-img.png" 
+                src="/img/bg-img/welcome-img.png" 
                 alt="WGN Logo" 
                 className="h-12 w-12"
               />

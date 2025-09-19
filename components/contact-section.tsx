@@ -21,7 +21,7 @@ export function ContactSection() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-emerald-500/10 mb-6 mx-auto">
             <img 
-              src="https://wifianglobal.com/img/bg-img/welcome-img.png" 
+              src="/img/bg-img/welcome-img.png" 
               alt="WGN Logo" 
               className="h-10 w-10"
             />

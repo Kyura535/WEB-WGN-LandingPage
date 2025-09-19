@@ -10,7 +10,7 @@ export function AboutSection() {
         >
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 mb-6 mx-auto shadow-lg border border-emerald-500/30">
             <img 
-              src="https://wifianglobal.com/img/bg-img/welcome-img.png" 
+              src="/img/bg-img/welcome-img.png" 
               alt="WGN Logo" 
               className="h-12 w-12"
             />
@@ -84,7 +84,7 @@ export function AboutSection() {
             <CardHeader className="pt-6">
               <CardTitle className="flex items-center">
                 <div className="w-12 h-12 text-emerald-400 mr-4 bg-emerald-500/20 rounded-xl flex items-center justify-center border border-emerald-500/30 shadow-md">
-                  <img src="https://wifianglobal.com/img/bg-img/welcome-img.png" alt="WGN Home" className="w-6 h-6" />
+                  <img src="/img/bg-img/welcome-img.png" alt="WGN Home" className="w-6 h-6" />
                 </div>
                 <span className="text-white text-xl font-extrabold">WGN Home</span>
               </CardTitle>
