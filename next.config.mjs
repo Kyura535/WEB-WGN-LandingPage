@@ -1,11 +1,12 @@
-import nextPWA from 'next-pwa'
+// Remove PWA for static export as it may cause issues
+// import nextPWA from 'next-pwa'
 
-const withPWA = nextPWA({
-  dest: 'public',
-  disable: process.env.NODE_ENV === 'development',
-  register: true,
-  skipWaiting: true,
-})
+// const withPWA = nextPWA({
+//   dest: 'public',
+//   disable: process.env.NODE_ENV === 'development',
+//   register: true,
+//   skipWaiting: true,
+// })
 
 const nextConfig = {
   eslint: {
@@ -40,4 +41,5 @@ const nextConfig = {
   trailingSlash: true,
 }
 
-export default withPWA(nextConfig)
+export default nextConfig
+// export default withPWA(nextConfig)
