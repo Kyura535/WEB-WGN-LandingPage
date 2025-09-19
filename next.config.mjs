@@ -19,21 +19,25 @@ const nextConfig = {
   },
   // Konfigurasi untuk static export
   output: 'export',
-  webpack(config, { isServer }) {
+  webpack: (config) => {
     // Fix for the webpack runtime issue
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-      }
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
     }
     
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ['@svgr/webpack'],
-    })
     return config
   },
+  // Ensure proper escaping of special characters in HTML output
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production' ? {
+      exclude: ['error'],
+    } : false,
+  },
+  // Disable features that don't work with static export
+  reactStrictMode: false,
+  // Ensure trailing slash for better compatibility
+  trailingSlash: true,
 }
 
 export default withPWA(nextConfig)

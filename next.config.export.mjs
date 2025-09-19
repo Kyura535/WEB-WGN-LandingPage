@@ -29,6 +29,10 @@ const nextConfig = {
     })
     return config
   },
+  // Disable features that don't work with static export
+  reactStrictMode: false,
+  // Ensure trailing slash for better compatibility
+  trailingSlash: true,
 }
 
 export default withPWA(nextConfig)

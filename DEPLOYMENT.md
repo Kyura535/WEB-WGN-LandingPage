@@ -1,53 +1,23 @@
-# Custom Build and Deployment Options
+# Deployment ke cPanel
 
-## Entry Points
+Untuk mendeploy proyek ini ke cPanel, ikuti langkah-langkah berikut:
 
-This project supports multiple entry points for different deployment scenarios:
+## 1. Build Proyek
 
-1. **Default Next.js entry point** - Uses the standard Next.js routing
-2. **Custom index.js entry point** - Custom server implementation for more control
-
-## Build Scripts
-
-We've added several new build scripts to package.json:
-
-- `build` - Standard Next.js build
-- `build:standalone` - Build with standalone server support
-- `dev:custom` - Run development server with custom entry point
-- `start:standalone` - Start the standalone server
-
-## Usage
-
-### Standard Development
 ```bash
-npm run dev
+npm run build:static
 ```
 
-### Custom Server Development
+## 2. Verifikasi File
+
 ```bash
-npm run dev:custom
+npm run verify:deployment
 ```
 
-### Production Build
-```bash
-npm run build
-```
+## 3. Upload ke cPanel
 
-### Standalone Production Build
-```bash
-npm run build:standalone
-```
+Upload seluruh isi direktori `out/` ke direktori `public_html` di cPanel Anda melalui File Manager.
 
-### Start Production Server
-```bash
-npm start
-```
+## Detail Lebih Lanjut
 
-### Start Standalone Production Server
-```bash
-npm run start:standalone
-```
-
-## Standalone Deployment
-
-The `build:standalone` script creates a self-contained version of the application that can be deployed without the need for the full source code. This is useful for containerized deployments or when you want to minimize the deployment package size.
+Lihat file [DEPLOYMENT-CPANEL.md](DEPLOYMENT-CPANEL.md) untuk informasi lengkap tentang deployment ke cPanel.

@@ -53,14 +53,13 @@ Jika cPanel Anda memiliki akses Terminal dan Node.js:
 File `.htaccess` sudah disediakan dalam direktori `public/` dan akan secara otomatis dit copy ke output build. File ini menghandle:
 
 - Routing fallback ke index.html untuk client-side routing
-- Optimisasi caching
-- Security headers
+- UTF-8 encoding
 
 ### Konfigurasi Next.js
 
 Konfigurasi untuk static export sudah diatur dalam `next.config.mjs`. Beberapa hal penting:
 
-- Output diatur ke `export` saat menggunakan `NEXT_EXPORT=true`
+- Output diatur ke `export`
 - Image optimization dinonaktifkan (karena tidak tersedia dalam static export)
 - Middleware tidak dapat digunakan
 
@@ -121,6 +120,7 @@ Pastikan file `.htaccess` sudah terupload dengan benar dan mengandung konfiguras
 
 - `npm run build:static` - Build proyek untuk static export
 - `npm run serve:static` - Jalankan server lokal untuk testing static files
+- `npm run verify:deployment` - Verifikasi integritas file sebelum deployment
 
 ## File yang Dihasilkan
 
@@ -135,3 +135,4 @@ Setelah build, direktori `out/` akan berisi:
 1. Build harus dilakukan setiap kali ada perubahan pada kode
 2. Selalu backup file sebelum melakukan update
 3. File `.env.local` tidak akan berfungsi dalam static export - gunakan environment variables cPanel jika diperlukan
+4. Gunakan `npm run verify:deployment` sebelum upload ke cPanel untuk memastikan file siap untuk deployment
