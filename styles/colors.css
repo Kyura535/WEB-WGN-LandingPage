@@ -1,0 +1,30 @@
+// Color palette for WGN website
+// Primary: Green shades
+// Secondary: Blue shades
+// Neutral: Gray shades
+
+:root {
+  /* Primary colors */
+  --wgn-primary: #10b981; /* Emerald-500 */
+  --wgn-primary-dark: #059669; /* Emerald-600 */
+  --wgn-primary-light: #34d399; /* Emerald-400 */
+  --wgn-primary-muted: #10b9811a; /* Emerald-500 with opacity */
+  
+  /* Secondary colors */
+  --wgn-secondary: #3b82f6; /* Blue-500 */
+  --wgn-secondary-dark: #2563eb; /* Blue-600 */
+  --wgn-secondary-light: #60a5fa; /* Blue-400 */
+  --wgn-secondary-muted: #3b82f61a; /* Blue-500 with opacity */
+  
+  /* Neutral colors */
+  --wgn-background: #f9fafb; /* Gray-50 */
+  --wgn-background-dark: #0f172a; /* Slate-900 */
+  --wgn-surface: #ffffff; /* White */
+  --wgn-surface-dark: #1e293b; /* Slate-800 */
+  --wgn-border: #e2e8f0; /* Slate-200 */
+  --wgn-border-dark: #334155; /* Slate-700 */
+  --wgn-text: #1e293b; /* Slate-800 */
+  --wgn-text-light: #64748b; /* Slate-500 */
+  --wgn-text-dark: #f1f5f9; /* Slate-50 */
+  --wgn-text-muted: #94a3b8; /* Slate-400 */
+}

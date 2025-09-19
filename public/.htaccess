@@ -1,0 +1,10 @@
+# Redirect all traffic to index.html for client-side routing
+RewriteEngine On
+
+# Handle React Router requests
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ /index.html [L,QSA]
+
+# Ensure UTF-8 encoding
+AddDefaultCharset UTF-8
