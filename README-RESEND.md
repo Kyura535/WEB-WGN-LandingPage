@@ -59,6 +59,15 @@ When deploying to Vercel:
 2. Make sure your domain is verified in your Resend dashboard
 3. Deploy your application
 
+## Custom Build and Deployment Options
+
+This project now supports multiple entry points and build options. See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed information about:
+
+- Custom entry points (`index.js`)
+- Standalone builds
+- Additional build scripts
+- Deployment strategies
+
 ## Customization
 
 You can customize:
