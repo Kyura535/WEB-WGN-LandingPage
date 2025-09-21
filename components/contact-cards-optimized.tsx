@@ -15,7 +15,7 @@ export function ContactCardsOptimized() {
     {
       icon: Mail,
       title: "Email Kami",
-      value: "marketing.wifianglobalnusantara@gmail.com",
+      value: "office@wifianglobal.com",
       subtitle: "Balas dalam 24 jam",
       type: "email"
     },
@@ -28,7 +28,7 @@ export function ContactCardsOptimized() {
   ];
 
   const handleEmailClick = () => {
-    window.location.href = "mailto:marketing.wifianglobalnusantara@gmail.com";
+    window.location.href = "mailto:office@wifianglobal.com";
   };
 
   const handlePhoneClick = () => {
