@@ -8,6 +8,7 @@
     "build:static": "next build",
     "dev": "next dev",
     "dev:custom": "node index.js",
+    "export": "next export",
     "lint": "next lint",
     "serve:static": "npx serve out",
     "start": "next start",
