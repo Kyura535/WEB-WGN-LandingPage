@@ -1,3 +1,6 @@
+"use client";
+
+import * as React from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Shield, Users, Zap, Award, Server, Users2 } from "lucide-react"
 
@@ -40,7 +43,7 @@ export function AboutSection() {
             <Card className="text-center transition-all duration-300 hover:shadow-lg border-slate-700 bg-slate-800/50 backdrop-blur-sm">
               <CardContent className="pt-6">
                 <div className="w-12 h-12 text-emerald-400 mx-auto mb-4 bg-emerald-500/20 rounded-lg flex items-center justify-center border border-emerald-500/30">
-                  <Users className="w-6 h-6" />
+                  {React.createElement(Users, { className: "w-6 h-6" })}
                 </div>
                 <h4 className="text-2xl font-extrabold text-white mb-2">5000+</h4>
                 <p className="text-sm text-slate-300">Pelanggan Aktif</p>
@@ -49,7 +52,7 @@ export function AboutSection() {
             <Card className="text-center transition-all duration-300 hover:shadow-lg border-slate-700 bg-slate-800/50 backdrop-blur-sm">
               <CardContent className="pt-6">
                 <div className="w-12 h-12 text-emerald-400 mx-auto mb-4 bg-emerald-500/20 rounded-lg flex items-center justify-center border border-emerald-500/30">
-                  <Zap className="w-6 h-6" />
+                  {React.createElement(Zap, { className: "w-6 h-6" })}
                 </div>
                 <h4 className="text-2xl font-extrabold text-white mb-2">99.9%</h4>
                 <p className="text-sm text-slate-300">Uptime</p>
@@ -58,7 +61,7 @@ export function AboutSection() {
             <Card className="text-center transition-all duration-300 hover:shadow-lg border-slate-700 bg-slate-800/50 backdrop-blur-sm">
               <CardContent className="pt-6">
                 <div className="w-12 h-12 text-emerald-400 mx-auto mb-4 bg-emerald-500/20 rounded-lg flex items-center justify-center border border-emerald-500/30">
-                  <Shield className="w-6 h-6" />
+                  {React.createElement(Shield, { className: "w-6 h-6" })}
                 </div>
                 <h4 className="text-2xl font-extrabold text-white mb-2">24/7</h4>
                 <p className="text-sm text-slate-300">Support</p>
@@ -67,7 +70,7 @@ export function AboutSection() {
             <Card className="text-center transition-all duration-300 hover:shadow-lg border-slate-700 bg-slate-800/50 backdrop-blur-sm">
               <CardContent className="pt-6">
                 <div className="w-12 h-12 text-emerald-400 mx-auto mb-4 bg-emerald-500/20 rounded-lg flex items-center justify-center border border-emerald-500/30">
-                  <Award className="w-6 h-6" />
+                  {React.createElement(Award, { className: "w-6 h-6" })}
                 </div>
                 <h4 className="text-2xl font-extrabold text-white mb-2">5 Tahun</h4>
                 <p className="text-sm text-slate-300">Pengalaman</p>
@@ -102,7 +105,7 @@ export function AboutSection() {
             <CardHeader className="pt-6">
               <CardTitle className="flex items-center">
                 <div className="w-12 h-12 text-emerald-400 mr-4 bg-emerald-500/20 rounded-xl flex items-center justify-center border border-emerald-500/30 shadow-md">
-                  <Users2 className="w-6 h-6" />
+                  {React.createElement(Users2, { className: "w-6 h-6" })}
                 </div>
                 <span className="text-white text-xl font-extrabold">Kemitraan WGN Hotspot</span>
               </CardTitle>
@@ -120,7 +123,7 @@ export function AboutSection() {
             <CardHeader className="pt-6">
               <CardTitle className="flex items-center">
                 <div className="w-12 h-12 text-emerald-400 mr-4 bg-emerald-500/20 rounded-xl flex items-center justify-center border border-emerald-500/30 shadow-md">
-                  <Server className="w-6 h-6" />
+                  {React.createElement(Server, { className: "w-6 h-6" })}
                 </div>
                 <span className="text-white text-xl font-extrabold">Kemitraan Server</span>
               </CardTitle>

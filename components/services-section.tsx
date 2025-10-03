@@ -1,5 +1,6 @@
 "use client"
 
+import * as React from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Wifi, Users, Server, Check, ArrowRight } from "lucide-react"
@@ -56,7 +57,7 @@ export function ServicesSection() {
             >
               <CardHeader className="pb-6">
                 <div className="mx-auto mb-6 p-4 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-2xl w-fit group-hover:from-emerald-500/30 group-hover:to-teal-500/30 transition-all duration-500 shadow-md border border-emerald-500/30">
-                  <product.icon className="h-10 w-10 text-emerald-400 group-hover:scale-110 transition-transform duration-300" />
+                  {React.createElement(product.icon, { className: "h-10 w-10 text-emerald-400 group-hover:scale-110 transition-transform duration-300" })}
                 </div>
                 <CardTitle className="text-2xl mb-3 group-hover:text-emerald-400 transition-colors text-white font-bold">{product.title}</CardTitle>
                 <CardDescription className="text-slate-300 text-base leading-relaxed">{product.description}</CardDescription>

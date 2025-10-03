@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button"
+"use client"
+
 import Link from "next/link"
-import { Home } from "lucide-react"
 
 export default function NotFound() {
   return (
@@ -12,10 +12,9 @@ export default function NotFound() {
           Sorry, we couldn't find the page you're looking for.
         </p>
         <Link href="/">
-          <Button className="rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 px-6 py-3">
-            <Home className="mr-2 h-4 w-4" />
+          <button className="rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 px-6 py-3 text-white">
             Back to Home
-          </Button>
+          </button>
         </Link>
       </div>
     </div>

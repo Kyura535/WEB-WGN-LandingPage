@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
-import { Script } from 'next/script'
+import Script from 'next/script'
 import './globals.css'
-import { ThemeProvider } from '@/components/theme-provider'
+import ThemeProviderWrapper from './theme-provider-wrapper'
 
 export const metadata: Metadata = {
   title: 'WGN Home Internet',
@@ -25,9 +25,9 @@ export default function RootLayout({
           type="text/javascript" 
           strategy="beforeInteractive"
         />
-        <ThemeProvider>
+        <ThemeProviderWrapper>
           {children}
-        </ThemeProvider>
+        </ThemeProviderWrapper>
       </body>
     </html>
   )

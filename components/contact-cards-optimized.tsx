@@ -49,7 +49,7 @@ export function ContactCardsOptimized() {
         >
           <CardContent className="p-6 text-center flex flex-col items-center justify-center">
             <div className="w-12 h-12 text-emerald-400 mx-auto mb-4 bg-emerald-900/30 rounded-lg flex items-center justify-center">
-              <item.icon className="h-6 w-6" />
+              {React.createElement(item.icon, { className: "h-6 w-6" })}
             </div>
             
             <h3 className="font-semibold mb-2 text-white break-words">

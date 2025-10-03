@@ -20,6 +20,41 @@ const testimonials = [
     rating: 5,
     text: "Cepat tanggap dan responsif. Semoga ke depannya tambah lancar segala nya.",
   },
+  {
+    name: "Agus Susanto",
+    rating: 5,
+    text: "Internet stabil, tidak pernah putus-putus. Speed sesuai dengan yang ditawarkan. Recommended!",
+  },
+  {
+    name: "Siti Aminah",
+    rating: 5,
+    text: "Layanan pelanggan sangat ramah dan membantu. Teknisi juga cepat dalam pemasangan.",
+  },
+  {
+    name: "Budi Santoso",
+    rating: 5,
+    text: "Akhirnya dapat internet cepat di daerah saya. Streaming tanpa buffering, kenceng bgt!",
+  },
+  {
+    name: "Dewi Lestari",
+    rating: 5,
+    text: "Paket internetnya terjangkau tapi kualitasnya juara. Tidak menyesal berlangganan di sini.",
+  },
+  {
+    name: "Ahmad Fauzi",
+    rating: 5,
+    text: "Dukungan teknis 24/7 sangat membantu. Setiap ada masalah langsung ditanggapi dengan cepat.",
+  },
+  {
+    name: "Rina Kartika",
+    rating: 5,
+    text: "Koneksi stabil untuk work from home. Download dan upload speed seimbang, sangat cocok untuk pekerja online.",
+  },
+  {
+    name: "Joko Prasetyo",
+    rating: 5,
+    text: "Customer service ramah dan profesional. Harga terjangkau dengan kualitas yang sangat bagus.",
+  },
 
 ]
 

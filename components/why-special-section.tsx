@@ -1,3 +1,4 @@
+import * as React from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Clock, Wifi, Upload } from "lucide-react"
 
@@ -31,7 +32,7 @@ export function WhySpecialSection() {
           {features.map((feature, index) => (
             <Card key={index} className="text-center border-0 shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="p-8">
-                <feature.icon className="h-12 w-12 text-primary mx-auto mb-4" />
+                {React.createElement(feature.icon, { className: "h-12 w-12 text-primary mx-auto mb-4" })}
                 <h3 className="text-lg font-semibold text-foreground mb-2">{feature.title}</h3>
                 <p className="text-muted-foreground">{feature.description}</p>
               </CardContent>

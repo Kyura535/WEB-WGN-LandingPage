@@ -6,7 +6,7 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 }
 
 export function Button({ asChild = false, className = "", ...props }: ButtonProps) {
-  const Cmp: React.ElementType = asChild ? Slot : "button"
+  const Cmp: React.ElementType = asChild ? (Slot ?? "button") : "button"
 
   return (
     <Cmp
